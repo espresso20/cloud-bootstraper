@@ -4,7 +4,8 @@ Shared preflight for our Terraform cloud stacks. One script makes sure the right
 cloud CLI is installed and you've got a live login session *before* `terraform`
 runs — so `make plan` doesn't faceplant halfway through on an expired token.
 
-Consumed by the Makefiles in `aws-stack-*` and `azure-tf-project-*`. Those repos
+Consumed by the Makefiles in our `aws-*` and `azure-*` stack repos — that glob is
+the adoption standard for now (more cloud prefixes as we add them). Those repos
 call into this one rather than each carrying their own copy of the logic.
 
 ## What it does
